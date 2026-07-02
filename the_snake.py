@@ -8,6 +8,7 @@
 from random import choice, randint
 
 import pygame as pg
+
 # pylint: disable=no-member
 
 # Константы для размеров поля и сетки:
