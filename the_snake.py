@@ -8,6 +8,7 @@
 from random import choice, randint
 
 import pygame as pg
+# pylint: disable=no-member
 
 # Константы для размеров поля и сетки:
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
@@ -96,6 +97,10 @@ class Snake(GameObject):
     def __init__(self, body_color=SNAKE_COLOR):
         """Инициализирует змейку в начальном состоянии."""
         super().__init__(body_color)
+        self.length = 1
+        self.positions = [self.position]
+        self.direction = RIGHT
+        self.last = None
         self.reset()
 
     def update_direction(self, next_direction):
